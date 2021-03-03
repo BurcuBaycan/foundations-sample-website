@@ -1,22 +1,39 @@
 <!-- This is a basic html page which Flask can serve. 
 It does not use the power of Flask, but is easier to read than some of the other files. 
--->
+
 
 <!DOCTYPE html>
 <html>
 
-<!-- learn more about what belongs in head and how it is used here 
-https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML -->
+learn more about what belongs in head and how it is used here 
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML 
 <head>
-	<title>A Static Page</title>
+	<title>Meal Prep</title>
 	<meta charset="utf-8"/>
     <link rel="stylesheet" href="../static/styles.css">
 </head> 
-<body>
-    <h1 class="banner">Hello, Static HTML!</h1>
-    <p>This page is static HTML, or hard-coded. It is similar to what we did in class the first week on glitch. </p>
-    <p>So far, we are not using the power of Flask, but you will in this assignment!</p>
+-->
+{% extends "base.html" %}
 
-    <p> To see a page which starts to use Flask to <em>generate</em> dynamic code, <a href="/first-page">click here</a>.</p>
-</body>
-</html>
+{% block content %}
+<div class="container">
+    <div class="header">
+            <div>
+                <h1>Beginner’s Guide on Meal Prep</h1>
+                <img src="https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2015/08/10-Tips-To-Make-Meal-Prep-Easier.960.jpg" alt="meal prep image">
+            </div>
+            <div>
+                <p>Here you will find some easy tips and delicious recipes are going to save you a ton of time and money. </p>
+            </div>    
+    </div> 
+    <div class="s-container">
+        <h4> What are the benefits of meal prepping?</h4>
+        <lu>
+            <li>You'll save money (you won't have to buy lunch anymore!)</li>
+            <li>You'll eat healthier (no impulsive decisions when you're starving)</li>
+            <li>You'll be less stressed (lunch is waiting for you in the fridge!)</li>
+        </lu><br>
+        <a href="/first-page">Let's get started</a>
+    </div>   
+</div>
+{% endblock %}

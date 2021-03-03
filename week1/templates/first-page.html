@@ -1,8 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p> This is the amazing stuff that will wind up on the first page I am making with a template. 
-    It looks simple - and it is, so far. Check out another page using the same base template <a href="/second-page">here</a>
-    </p>
-
+    <div class="first-page">
+        <h1>3 steps of meal prep</h1>
+        <p>Tips for getting started:</p>
+        <div class="tips">
+            <dl>
+                <dt> <h3>Identify the pain points of your mealtime and needs.</h3></dt>
+                <dd> -The point of the meal prep is to make the meal times easier. So, what do you need to feel more in control, more healthy, free? Think of your struggles.
+                    Don't try to prep it all at once, your first time. Choose your biggest pain point, and decide where to focus.
+                </dd>
+                <dt><h3>Choose your prep-ahead foods to meet your needs.</h3></dt>
+                <dd> -Find the core set of recipes that you can depend on. Over time, you can find a set of recipes that you love and that you know how to work. You might even have them memorized! This makes it so easy to prepare the meal routine.</dd>
+                <dt><h3>Make a plan!</h3></dt>
+                <dd>
+                    <ol>
+                        <li>Make a written, ordered list of all the tasks you plan to accomplish during your meal prep session. List out what you need to cook, and look for ways to double up (make something on the stove while something else is in the oven).</li>
+                        <li>Make shopping list</li>
+                        <li>Prep!</li>
+                    </ol>
+                    <p>For the first month, you have to work your meal prep into your routine, so it is smart to schedule off a block of time dedicated to your meal prep</p>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    
 {% endblock %}

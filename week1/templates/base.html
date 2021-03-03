@@ -4,28 +4,38 @@
 <html>
   <head>
     <!-- the page title will be a varible passed to the render_template() function for each page separately-->
-    <title> {{ page_title }}</title>
+    <title> meal prep </title>
   	<meta charset="utf-8"/>
     <!-- include the css from the file static/style.css -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
   </head>
+
   <body>
 
-  <!-- this headline will appear on all pages. -->
-  <header>
-    <div class="banner">
-      <h1> All about CODE </h1> 
-      <h3> A really great place. </h3>
-    </div>
-  </header>
+    <!-- this headline will appear on all pages. -->
+    <header>
+      <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/first-page">Tips</a>
+        <a href="/second-page">How to </a>
+      </div>
+    </header>
 
-  <!-- This is the part which will be different on each page. 
-       see first-page.html for an example of using it -->
-  <main>
-    {% block content%}
-    {% endblock %}
-  </main>
-  <footer>
-    <h3> Made with love </h3>
-  </footer>
+    <!-- This is the part which will be different on each page. 
+        see first-page.html for an example of using it -->
+    <main>
+      {% block content%}
+      {% endblock %}
+    </main>
+    <footer>
+      <div class="form">
+        <form action="">
+          <div class="form">
+            <label for="email">Subscribe to meal prep newsletter to learn more tips: </label>
+            <input type="text" valuw="yourmail@email.com">
+            <input type="submit" value="Subscribe!">
+          </div>
+        </form>
+      </div>
+    </footer>
   </body>

@@ -1,12 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p> By looking at the website in your browser and seeing this code in your editor, 
-    maybe you can start to see what is going on. There are some things that we want on 
-    every page, like the header or the footer, so we will code that once in the file base.html, 
-    and use that as a building block in other files to create the specific pages we need. 
 
-    This is a key principle of software engineering, called Don't Repeat Yourself, or the DRY principle. 
-    The core idea is to make mistakes in your code in exactly one place and reuse that code everywhere, instead 
-    of copy-pasting your buggy code all over the place. It is much harder to fix that way. 
+
+<div class="second-page">
+    <video class="header-bg-video" autoplay="" loop="" muted=""><source class="" data-src="https://hmg-h-cdn.hearstapps.com/videos/meal-prep-lead-loop-1568398502.mp4" data-type="video/mp4" src="https://hmg-h-cdn.hearstapps.com/videos/meal-prep-lead-loop-1568398502.mp4" type="video/mp4"></video>
+
+    <p>
+        <div class="title">
+            <em><strong>How to meal prep</strong></em><br>
+        </div>
+        - Cook and portion out into meal prep containers. Check recipe directions for whether sauce can be added immediately or must be stored separately.
+    </p>
+    <p>
+        <div class="title">
+            <em><strong>How to store</strong></em><br>
+        </div>
+        - Use meal prep containers. Store in the fridge for up to 4 days.
+    </p>
+    <p>
+        <div class="title">
+            <em><strong>How to serve</strong></em><br>
+        </div>
+        - Heat in the microwave until steaming hot and enjoy!
+    </p>
+    
+</div>    
 {% endblock %}
