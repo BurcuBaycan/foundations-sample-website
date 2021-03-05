@@ -13,7 +13,7 @@ def get_color_code(color_name):
     # this is where you should add your logic to check the color.
     # Open the file at data/css-color-names.json, and return the hex code
     # The file can be considered as JSON format, or as a Python dictionary.
-    with open('data/css-color-names.json') as database:
+    with open('color_check/data/css-color-name.json') as database:
         color = json.load(database)
 
         if color_name in color:
