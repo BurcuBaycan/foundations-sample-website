@@ -27,5 +27,6 @@ def get_color_code(color_name):
                 hex_code = color_data[color_name]
                 return hex_code
 
-    except FileNotFoundError:
-        return " File not found"
+    except:
+        hex_code = "Color not exist"
+        return hex_code
