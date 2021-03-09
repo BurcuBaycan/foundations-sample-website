@@ -24,7 +24,7 @@ def get_color_code(color_name):
             color_data = json.load(f)
             colors = color_data.keys()
             if color_name in colors:
-                hex_code = color_data[key]
+                hex_code = color_data[color_name]
                 return hex_code
 
     except FileNotFoundError:
