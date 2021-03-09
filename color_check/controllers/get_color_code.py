@@ -7,17 +7,25 @@
 # letting them know that their color doesn't exist.
 
 import json
+import os
 
 
 def get_color_code(color_name):
     # this is where you should add your logic to check the color.
     # Open the file at data/css-color-names.json, and return the hex code
     # The file can be considered as JSON format, or as a Python dictionary.
-    with open('color_check/data/css-color-name.json') as database:
-        color = json.load(database)
+    try:
+        color_name = color_name.lower().strip()
+    except AttributeError:
+        pass
 
-        if color_name in color:
-            hex_code = color[color_name]
-            return hex_code
-        else:
-            raise Exception("Try again")
+    try:
+        with open('/Users/burcubaycan/projects/foundations-sample-website/color_check/data/css-color-names.json') as f:
+            color_data = json.load(f)
+            colors = color_data.keys():
+                if color_name in colors:
+                    hex_code = color[key]
+                    return hex_code
+
+    except FileNotFoundError:
+        return " File not found"
