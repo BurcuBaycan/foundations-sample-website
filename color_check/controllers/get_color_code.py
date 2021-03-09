@@ -22,10 +22,10 @@ def get_color_code(color_name):
     try:
         with open('/Users/burcubaycan/projects/foundations-sample-website/color_check/data/css-color-names.json') as f:
             color_data = json.load(f)
-            colors = color_data.keys():
-                if color_name in colors:
-                    hex_code = color[key]
-                    return hex_code
+            colors = color_data.keys()
+            if color_name in colors:
+                hex_code = color[key]
+                return hex_code
 
     except FileNotFoundError:
         return " File not found"
