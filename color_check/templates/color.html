@@ -1,10 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p> Hex code for your color {{color_name}} is {{color_hex_code}}
-    </p>
+{% if color_hex_code == "error" %}
+<div class="error">
+    <p>Please try another color</p>
+    
+</div>
+
+{% else %}
     <div>
-        <div class="square" style="background-color: {{color_hex_code}}"></div>
-        <a href="/">I wanna try different color</a>
+        <p> Hex code for your color is {{color_hex_code}}</p>
+        <a href="/"><input type="button" value="back"></a>
     </div>
+<style>
+    body {
+        background-color: {{color_hex_code}};
+    }
+</style>    
+{% endif %}
 {% endblock %}

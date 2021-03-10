@@ -19,14 +19,23 @@ def get_color_code(color_name):
     except AttributeError:
         pass
 
-    try:
-        with open('/Users/burcubaycan/projects/foundations-sample-website/color_check/data/css-color-names.json') as f:
-            color_data = json.load(f)
-            colors = color_data.keys()
-            if color_name in colors:
-                hex_code = color_data[color_name]
-                return hex_code
-
-    except:
-        hex_code = "Color not exist"
+   # try:
+    # with open('color_check/data/css-color-names.json', 'r') as f:
+    #    color_data = json.load(f)
+        #    colors = color_data.keys()
+        # if color_name in colors:
+        #    hex_code = color_data[color_name]
+    #    hex_code = color_data.get(
+    #        color_name, "color is not exist, try real color")
+    # return hex_code
+    with open('color_check/data/css-color-names.json', 'r') as f:
+        color_data = json.load(f)
+        colors = color_data.keys()
+    if color_name in colors:
+        hex_code = color_data[color_name]
         return hex_code
+    else:
+        hex_code = 'error'
+        return hex_code
+    # except FileNotFoundError:
+    #    return " File not found"
