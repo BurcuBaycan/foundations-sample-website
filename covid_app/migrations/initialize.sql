@@ -1,0 +1,7 @@
+BEGIN TRANSACTION;
+
+
+CREATE TABLE IF NOT EXISTS “Meetings” ( “Name” text, “Date” TEXT, PRIMARY KEY(“Name”));
+
+
+COMMIT;
